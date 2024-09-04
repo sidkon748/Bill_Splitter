@@ -14,4 +14,28 @@ function calculateTip(billAmount) {
         return billAmount * 0.20; // 20% tip for any other amount
     }
 }
-console.log(calculateTip(100));//Display tip amount with billAmount input as a number
+console.log(calculateTip(100));//Display tip amount with billAmount input as a number 
+
+//Utilize Arrays
+
+// Data Set 1: Bill Calulations
+const bills1 = [275, 40, 430];
+const tips1 = bills1.map(calculateTip);
+const totals1 = bills1.map((bill, index) => bill + tips1[index])
+
+// Data Set 2: Bill Calulations
+const bills2 = [125, 555, 44];
+const tips2 = bills2.map(calculateTip);
+const totals2 = bills2.map((bill, index) => bill + tips1[index])
+
+// Bills, Tips, and Totals for Data Set 1
+console.log("Bills, Tips, and Totals from Data Set 1");
+console.log("Bills:", bills1);
+console.log("Tips:", tips1);
+console.log("Totals:", totals1);
+
+// Bills, Tips, and Totals for Data Set 2
+console.log("Bills, Tips, and Totals from Data Set 2");
+console.log("Bills:", bills2);
+console.log("Tips:", tips2);
+console.log("Totals:", totals2);
